@@ -24,13 +24,21 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Button"/>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h0C-DM-x1g">
+                                <rect key="frame" x="427" y="313" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Y6q-ty-eHp" firstAttribute="top" secondItem="wVC-34-z1B" secondAttribute="bottom" constant="30" id="6fS-RV-BDX"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wVC-34-z1B" secondAttribute="trailing" constant="20" id="Bht-Jo-L2d"/>
+                            <constraint firstItem="h0C-DM-x1g" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="N7e-NT-a5N"/>
                             <constraint firstItem="wVC-34-z1B" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="R0q-qT-F2Q"/>
+                            <constraint firstItem="h0C-DM-x1g" firstAttribute="top" secondItem="Y6q-ty-eHp" secondAttribute="bottom" constant="30" id="bBg-iB-ulv"/>
                             <constraint firstItem="wVC-34-z1B" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="sWL-sp-Hha"/>
                             <constraint firstItem="Y6q-ty-eHp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tse-bf-51j"/>
                         </constraints>
