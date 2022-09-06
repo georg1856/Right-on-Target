@@ -19,13 +19,20 @@
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="wVC-34-z1B">
                                 <rect key="frame" x="62" y="192" width="772" height="31"/>
                             </slider>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y6q-ty-eHp">
+                                <rect key="frame" x="414.5" y="252" width="67" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Y6q-ty-eHp" firstAttribute="top" secondItem="wVC-34-z1B" secondAttribute="bottom" constant="30" id="6fS-RV-BDX"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wVC-34-z1B" secondAttribute="trailing" constant="20" id="Bht-Jo-L2d"/>
                             <constraint firstItem="wVC-34-z1B" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="R0q-qT-F2Q"/>
                             <constraint firstItem="wVC-34-z1B" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="sWL-sp-Hha"/>
+                            <constraint firstItem="Y6q-ty-eHp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tse-bf-51j"/>
                         </constraints>
                     </view>
                 </viewController>
