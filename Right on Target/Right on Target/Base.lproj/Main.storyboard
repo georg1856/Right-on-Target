@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="wVC-34-z1B">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="25" minValue="0.0" maxValue="50" translatesAutoresizingMaskIntoConstraints="NO" id="wVC-34-z1B">
                                 <rect key="frame" x="62" y="192" width="772" height="31"/>
                                 <color key="tintColor" red="0.92093330620000002" green="0.114337571" blue="0.20991650219999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <imageReference key="minimumValueImage" image="01.circle.fill" catalog="system" symbolScale="large"/>
@@ -33,6 +33,9 @@
                                     <color key="baseForegroundColor" red="0.92093330620000002" green="0.114337571" blue="0.20991650219999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="baseBackgroundColor" red="0.81120687719999995" green="0.82411187890000004" blue="0.81332200769999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="checkNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JpK-zw-Upe"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h0C-DM-x1g">
                                 <rect key="frame" x="442" y="322" width="12.5" height="26.5"/>
@@ -53,6 +56,10 @@
                             <constraint firstItem="Y6q-ty-eHp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tse-bf-51j"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="label" destination="h0C-DM-x1g" id="XgL-NU-huR"/>
+                        <outlet property="slider" destination="wVC-34-z1B" id="UUA-Be-qrB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
