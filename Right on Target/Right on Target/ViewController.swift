@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     var number = 0
     
     // раунд
-    var round = 0
+    var round = 1
     
     // сумма очков за раунд
     var points = 0
@@ -22,41 +22,40 @@ class ViewController: UIViewController {
     @IBOutlet weak var label: UILabel!
     
     @IBAction func checkNumber(_ sender: Any) {
-        
-        if round == 0 {
-            number = Int.random(in: 1...50)
-            label.text = String(number)
-            round = 1
+ 
+        let numSlider = Int(slider.value)
+            
+        if numSlider > number {
+            self.points += 50 - numSlider + self.number
+        } else if numSlider < self.number {
+            self.points += 50 - self.number + numSlider
         } else {
-            let numSlider = Int(slider.value.rounded())
+            self.points += 50 }
             
-            if numSlider > number {
-                self.points += 50 - numSlider + self.number
-            } else if numSlider < self.number {
-                    self.points += 50 - self.number + numSlider
-                } else {
-                    self.points += 50 }
-            
-            if self.round == 5 {
-                let alert = UIAlertController(title: "Игра окончена",
-                                              message: "Вы заработали \(self.points) очков",
-                                              preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: "Начать заново",
-                                              style: .default,
-                                              handler: nil))
-                self.present(alert, animated: true, completion: nil)
-                self.round = 1
-                self.points = 0
-            } else {
-                self.round += 1
-            }
-            
-            self.number = Int.random(in: 1...50)
+        if self.round == 5 {
+            let alert = UIAlertController(title: "Игра окончена",
+                                          message: "Вы заработали \(self.points) очков",
+                                          preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Начать заново",
+                                          style: .default,
+                                          handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            self.round = 1
+            self.points = 0
+        } else {
+            self.round += 1
         }
+            
+        self.number = Int.random(in: 1...50)
+        self.label.text = String(self.number)
     }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        number = Int.random(in: 1...50)
+        label.text = String(number)
+        print("viewDidLoad")
     }
 }
